@@ -19,6 +19,15 @@ public class JavalinSingleton {
         
         //write endpoint here
 
+        //no need to include .start(9000) here because it is already done for us
+        
+        app.get("/hello", ctx -> { // this is appended to the end of the destination url
+            //logic to be executed when this endpoint is hit
+            ctx.result("Hello World"); 
+        });
+        
+
+
         return app;
     }
     
